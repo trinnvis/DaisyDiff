@@ -46,7 +46,7 @@ public class HTMLDiffer implements Differ{
         settings.setUseGreedyMethod(false);
         // settings.setPowLimit(1.5);
         // settings.setTooLong(100000*100000);
-    	org.eclipse.compare.rangedifferencer.RangeDifference[] differences = RangeDifferencer.findDifferences(settings, ancestorComparator, leftComparator, rightComparator);
+    	org.eclipse.compare.rangedifferencer.RangeDifference[] differences = RangeDifferencer.findDifferences(ancestorComparator, leftComparator, rightComparator);
     	
     	List<RangeDifference> pdifferences = preProcess(differences);
     	
